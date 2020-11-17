@@ -44,7 +44,7 @@ public class PhysicsGlider : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftBracket))
             transform.Rotate(Vector3.up * 5.0f);
         roll = Input.GetAxis("Roll");
-        pitch = Mathf.Clamp(pitch + Input.GetAxis("Pitch"), -1.0f, 1.0f);
+        pitch = Input.GetAxis("Pitch");
         yaw = Input.GetAxis("Yaw");
         leftAileron.SetAngle(-roll);
         rightAileron.SetAngle(roll);

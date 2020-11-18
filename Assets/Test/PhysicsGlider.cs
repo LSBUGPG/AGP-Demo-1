@@ -9,10 +9,10 @@ public class PhysicsGlider : MonoBehaviour
 
     Rigidbody physics;
 
-    public Aerofoil leftAileron;
-    public Aerofoil rightAileron;
-    public Aerofoil elevator;
-    public Aerofoil rudder;
+    public Aileron leftAileron;
+    public Aileron rightAileron;
+    public Aileron elevator;
+    public Aileron rudder;
 
     public Vector2 mouse;
 
@@ -41,14 +41,12 @@ public class PhysicsGlider : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftBracket))
-            transform.Rotate(Vector3.up * 5.0f);
         roll = Input.GetAxis("Roll");
         pitch = Input.GetAxis("Pitch");
         yaw = Input.GetAxis("Yaw");
-        leftAileron.SetAngle(-roll);
-        rightAileron.SetAngle(roll);
-        elevator.SetAngle(-pitch);
-        rudder.SetAngle(-yaw);
+        leftAileron.Adjust(-roll);
+        rightAileron.Adjust(roll);
+        elevator.Adjust(-pitch);
+        rudder.Adjust(-yaw);
     }
 }

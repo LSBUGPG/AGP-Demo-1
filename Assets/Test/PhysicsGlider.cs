@@ -36,7 +36,7 @@ public class PhysicsGlider : MonoBehaviour
         Rigidbody physics = GetComponent<Rigidbody>();
         physics.centerOfMass = Vector3.forward * centreOfMass;
         Vector3 cog = physics.centerOfMass;
-        Gizmos.DrawWireSphere(cog, 1.0f);
+        Gizmos.DrawWireSphere(cog, 0.1f);
     }
 
     void Update()

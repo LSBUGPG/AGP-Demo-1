@@ -14,12 +14,12 @@ public class Aerofoil : MonoBehaviour
         air = FindObjectOfType<Air>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        float angleOfAttack = Vector3.SignedAngle(-transform.forward, air.GetWindVector(), transform.right);
-        float CL = lift.Evaluate(angleOfAttack);
         if (debug)
         {
+            float angleOfAttack = Vector3.SignedAngle(-transform.forward, air.GetWindVector(), transform.right);
+            float CL = lift.Evaluate(angleOfAttack);
             Debug.LogFormat("{0} aoa {1} lift {2}", name, angleOfAttack, CL);
         }
     }

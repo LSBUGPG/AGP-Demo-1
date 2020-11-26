@@ -7,6 +7,7 @@ public class Aileron : MonoBehaviour
 {
     public float range = 5.0f;
     public float surfaceArea = 0.0f;
+    public bool debug = false;
     Rigidbody physics;
     Air air;
     public Aerofoil aerofoil;
@@ -32,6 +33,10 @@ public class Aileron : MonoBehaviour
         physics.AddForceAtPosition(transform.up * lift, transform.position);
         Debug.DrawRay(transform.position, transform.up * lift, Color.yellow);
         Debug.DrawRay(transform.position, transform.forward * -drag, Color.green);
+        if (debug)
+        {
+            Debug.LogFormat("{0} lift {1} @ speed {2}", name, lift, relativeAir.magnitude);
+        }
     }
 
 	public void Adjust(float value)

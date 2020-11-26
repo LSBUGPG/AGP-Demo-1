@@ -34,3 +34,19 @@ So to maintain altitude with a relative air speed of 25 m/s and a standard air d
 > * C<sub>L</sub> = ~275 &div; ~766
 
 > * C<sub>L</sub> = ~0.36
+
+## Calculations for a Kiwi pilot
+
+The average weight of a kiwi is 2.4 kg. I'm going to assume the glider will weigh approximately the same. So our total for the craft is 4.8 kg.
+
+From the above, our lift requirement is therefore:
+
+> 4.8 &times; 9.81 = ~47.088 N
+
+If we are getting a lift of ~275N per m&sup2; then we'll need a total lift surface area of ~0.17 m&sup2;
+
+Sticking with a ratio of 5:1 for wings to elevator, that means our wings will need to be ~0.14 m&sup2; or ~0.07 m&sup2; each and the elevator will need to be ~0.028 m&sup2;
+
+And if we keep the same span to depth ratio of 10:1 we'll need a wing span 10d &times; d = ~0.14 &there4; d = 0.12 (1.2m wide and 0.12m deep.)
+
+For the elevator 2d &times; 1d = ~0.028 &there4; d = 0.12 (0.24m wide and 0.12m deep.)
